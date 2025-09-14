@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+}
+
+#sidebar {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+.active {
+    background-color: #374151; /* bg-gray-700 */
+}
+
+@media (min-width: 640px) {
+    #sidebar {
+        transform: translateX(0);
+        position: relative;
+        width: 16rem;
+    }
+    #sidebar-btn {
+        display: none;
+    }
+}
